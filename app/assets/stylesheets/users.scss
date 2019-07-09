@@ -1,0 +1,133 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+
+body {
+  padding: 20%;
+  font: {
+    family: Verdana, Helvetica, Arial;
+    size: 14px;
+  }
+}
+
+.container {
+  padding: 16px;
+  border: 2px solid #2d4159;
+  border-radius: 12px;
+}
+
+a {
+  color: #2d4159;
+
+  &:hover {
+    color: #233245;
+  }
+}
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* header */
+
+header {
+  border-bottom: 1px solid $gray-medium-light;
+  margin-bottom: 10px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: lightgrey;
+
+  a {
+    color: gray;
+
+    &:hover {
+      color: darkgray;
+    }
+  }
+}
+
+/* forms */
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+form label {
+  color: #6c7c9a;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding-bottom: 0.2em;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:hover:visited,
+input[type="submit"]:focus,
+input[type="submit"]:focus:visited {
+  color: #fff;
+}
+
+input[type="submit"]:active,
+input[type="submit"]:active:visited {
+  color: #fff;
+}
+
+div.field_with_errors label {
+  color: red;
+  font-weight: bold;
+}
+
+div.field_with_errors input {
+  border: 3px solid red;
+}
