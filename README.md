@@ -20,14 +20,8 @@ This is the fifth project of the Main Rails curriculum at [Microverse](https://w
 
 ##### Validations
 
-```
-User
-- `name` can not be blank and can not exceed 100 characters
-`email` can not be blank and can not exceed 30 characters
-
-Post
-- `title` can not be blank, can not exceed 100 characters and must be unique
-- `body` can not be blank and can not exceed 200 characters
+No validations is set for both the User and Post model
+User model have the has_
 
 ## Usage Instructions
 
@@ -61,29 +55,39 @@ rails console
 
 ``` bash
 
-> user = User.create(:name => "Cheif", :email => "cheif@email.com", :password => "password", :password_confirmation => "password")
+> user = User.create(:name => "Chief", :email => "chief@email.com", :password => "password", :password_confirmation => "password")
 > user.authenticate("wrongpassword")
 => false
 > user.authenticate("password")
-=> #<User id: 1, name: "foobar", email: "foo@bar.com", password_digest: "$2a$10$9Lx...", created_at: "2016...", updated_at: "2016...">
+=> #<User id: 1, name: "Chief", email: "chief@email.com", password_digest: "$2a$10$9Lx...", created_at: "2019...", updated_at: "2019...">
 
 ```
 
-## Sign in form
+## Screenshots
+
+### Show all posts (Without Author)
+
+`http://localhost:3000/` or `http://localhost:3000/posts`
+
+![Show all posts (Without Author)](https://res.cloudinary.com/bolaah/image/upload/v1562715070/github-microverse-project/members-only/allposts-logged-out.png)
 
 
+### Show all posts (With Author, logged in users)
+
+`http://localhost:3000/` or `http://localhost:3000/posts`
+![Show all posts (With Author, logged in users)](https://res.cloudinary.com/bolaah/image/upload/v1562715071/github-microverse-project/members-only/allposts-logged-in.png)
 
 
+### Login page
 
-### Show current user
+`http://localhost:3000/login`
+![Login Page](https://res.cloudinary.com/bolaah/image/upload/v1562715069/github-microverse-project/members-only/allpost-signup-page.png)
 
-`http://localhost:3000/users/1`
-![Show current user](https://res.cloudinary.com/bolaah/image/upload/v1560484514/github-microverse-project/rails_form/form_display.png)
 
-### Show all users
+### Create new post
 
-`http://localhost:3000/users`
-![Show all users](https://res.cloudinary.com/bolaah/image/upload/v1560484514/github-microverse-project/rails_form/form_show_all.png)
+`http://localhost:3000/posts/new`
+![Create new post](https://res.cloudinary.com/bolaah/image/upload/v1562717233/github-microverse-project/members-only/all-post-new.png)
 
 
 
